@@ -5,12 +5,7 @@ interface inputProps {
   value?: string;
 }
 
-const Input = ({
-  name,
-  type,
-  placeholder,
-  value,
-}: inputProps) => {
+const Input = ({ name, type, placeholder, value }: inputProps) => {
   return (
     <>
       <input
@@ -21,7 +16,7 @@ const Input = ({
         placeholder={placeholder}
       />
     </>
-  );
-};
+  )
+}
 
-export default Input;
+export default Input
