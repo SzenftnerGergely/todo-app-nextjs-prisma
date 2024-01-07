@@ -1,5 +1,5 @@
 import EditTodo from "./EditTodo";
-
+import DeleteTodo from "./DeleteTodo";
 import ChangeTodo from "./ChangeTodo";
 import { todoType } from "@/types/todoTypes";
 
@@ -21,7 +21,7 @@ const Todo = ({ todo }: { todo: todoType }) => {
       </span>
       <div className="flex items-center gap-5">
         <EditTodo todo={todo} />
-
+        <DeleteTodo todo={todo} />
       </div>
     </div>
   );
