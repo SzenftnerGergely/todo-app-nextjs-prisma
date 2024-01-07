@@ -1,7 +1,6 @@
 "use client"
 
-import { useRef } from "react"
-import { ReactNode } from "react"
+import { useRef, ReactNode } from "react"
 
 interface FormProps {
   children: ReactNode
