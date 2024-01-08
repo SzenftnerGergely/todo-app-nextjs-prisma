@@ -3,13 +3,14 @@ interface inputProps {
   type: string;
   placeholder?: string;
   value?: string;
+  style?: string;
 }
 
-const Input = ({ name, type, placeholder, value }: inputProps) => {
+const Input = ({ name, type, placeholder, value, style }: inputProps) => {
   return (
     <>
       <input
-        className="w-full p-2 border-gray-200 border"
+        className={`${style} w-full flex items-center bg-white rounded-md py-5 px-5 focus:outline-none`}
         name={name}
         type={type}
         value={value}

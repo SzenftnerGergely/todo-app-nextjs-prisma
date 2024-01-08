@@ -36,14 +36,13 @@ const EditTodo = ({ todo }: { todo: todoType }) => {
             value={todo.id}
             type="hidden"
           />
-          <div className="flex justify-center">
+          <div className="flex justify-center items-center">
             <Input
               type="text"
               name="newTitle"
               placeholder="Edit Todo..."
+              style="border mr-2"
             />
-
-            <Button type="submit" text="Save" />
           </div>
         </Form>
       ) : null}

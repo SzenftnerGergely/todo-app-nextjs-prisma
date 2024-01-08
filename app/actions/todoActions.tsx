@@ -73,3 +73,18 @@ export async function deleteTodo(formData: FormData) {
 
   revalidatePath("/");
 }
+
+export async function getAllTodos() {
+  const data = await prisma.todo.findMany({
+      select: {
+          title: true,
+          id: true,
+          isCompleted: true,
+      },
+      orderBy: {
+          createdAt: "desc",
+      },
+  })
+
+  return data
+}

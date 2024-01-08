@@ -1,10 +1,13 @@
 import { todoStatus } from "@/app/actions/todoActions";
 import Form from "../ui/Form";
 import Button from "../ui/Button";
-import { AiOutlineCheckCircle } from "react-icons/ai";
+import { MdOutlineCheck } from "react-icons/md";
+import { GiCircle } from "react-icons/gi";
 import { todoType } from "@/types/todoTypes";
 
 const ChangeTodo = ({ todo }: { todo: todoType }) => {
+  const {isCompleted} = todo
+
   return (
     <Form action={todoStatus}>
       <input
@@ -17,7 +20,12 @@ const ChangeTodo = ({ todo }: { todo: todoType }) => {
       <Button
         actionButton
         type="submit"
-        text={<AiOutlineCheckCircle />}
+        text={isCompleted ? 
+          <MdOutlineCheck  className="rounded-full p-1 text-white
+          bg-gradient-to-br from-[#69c2fc] to-[#a574ee]" /> 
+          : <GiCircle className="text-gray-400" />
+        }
+        stye="text-2xl fill-white p-0 hover:bg-white flex items-center"
       />
     </Form>
   );

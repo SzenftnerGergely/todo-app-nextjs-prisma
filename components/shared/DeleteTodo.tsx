@@ -1,6 +1,6 @@
 import { deleteTodo } from "@/app/actions/todoActions";
 import Button from "../ui/Button";
-import { BsFillTrashFill } from "react-icons/bs";
+import { GrClose } from "react-icons/gr";
 import Form from "../ui/Form";
 import { todoType } from "@/types/todoTypes";
 
@@ -10,7 +10,7 @@ const DeleteTodo = ({ todo }: { todo: todoType }) => {
       <input type="hidden" name="inputId" value={todo.id} />
       <Button
         actionButton
-        text={<BsFillTrashFill />}
+        text={<GrClose />}
         type="submit"
       />
     </Form>
