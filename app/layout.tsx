@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Josefin_Sans } from 'next/font/google'
 import './globals.css'
 import Background from '@/components/shared/Background'
+import ThemeContextProvider from '@/components/shared/ThemeContext'
 
 
 const Josefin_San = Josefin_Sans({
@@ -22,10 +23,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={Josefin_San.className}>
+      <ThemeContextProvider>
         <Background />
         <div className='h-screen w-full flex flex-col items-center text-[#9ca3b7]'>
           {children}
         </div>
+        </ThemeContextProvider>
       </body>
     </html>
   )

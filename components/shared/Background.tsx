@@ -6,7 +6,7 @@ export default function Background() {
         <Image
             alt="Cover"
             src={cover}
-            className='w-full absolute -z-50'
+            className='w-full absolute -z-30'
             quality={100}
             priority
         />

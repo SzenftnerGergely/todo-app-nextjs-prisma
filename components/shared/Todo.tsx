@@ -16,7 +16,7 @@ const Todo = ({ todo }: { todo: todoType }) => {
           {todo.title}
         </div>
       </div>
-      <div className="flex items-center gap-5">
+      <div className="flex items-center gap-2">
         <EditTodo todo={todo} />
         <DeleteTodo todo={todo} />
       </div>

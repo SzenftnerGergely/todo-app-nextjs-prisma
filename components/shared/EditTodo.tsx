@@ -3,7 +3,7 @@
 import { edit } from "@/app/actions/todoActions";
 import Form from "../ui/Form";
 import Input from "../ui/Input";
-import { BiEdit } from "react-icons/bi";
+import { FaPen } from "react-icons/fa";
 import { useState } from "react";
 import Button from "../ui/Button";
 import { todoType } from "@/types/todoTypes";
@@ -22,10 +22,10 @@ const EditTodo = ({ todo }: { todo: todoType }) => {
     setEditTodo(false);
   };
   return (
-    <div className="flex gap-5 items-center">
+    <div className="flex items-center">
       <Button
         onClick={handleEdit}
-        text={<BiEdit />}
+        text={<FaPen />}
         actionButton
       />
 
@@ -41,7 +41,7 @@ const EditTodo = ({ todo }: { todo: todoType }) => {
               type="text"
               name="newTitle"
               placeholder="Edit Todo..."
-              style="border mr-2"
+              style="border mr-2 px-1.5 py-1.5"
             />
           </div>
         </Form>
