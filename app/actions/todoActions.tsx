@@ -74,6 +74,16 @@ export async function deleteTodo(formData: FormData) {
   revalidatePath("/");
 }
 
+export async function deleteCompletedTodo() {
+
+  await prisma.todo.deleteMany({
+    where: { isCompleted: true },
+  });
+
+  revalidatePath("/");
+}
+
+
 export async function getAllTodos() {
   const data = await prisma.todo.findMany({
       select: {

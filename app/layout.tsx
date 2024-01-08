@@ -23,11 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={Josefin_San.className}>
-      <ThemeContextProvider>
-        <Background />
-        <div className='h-screen w-full flex flex-col items-center text-[#9ca3b7]'>
-          {children}
-        </div>
+        <ThemeContextProvider>
+          <Background />
+          <div className='h-screen w-full flex flex-col items-center text-[#9ca3b7]'>
+            {children}
+          </div>
         </ThemeContextProvider>
       </body>
     </html>

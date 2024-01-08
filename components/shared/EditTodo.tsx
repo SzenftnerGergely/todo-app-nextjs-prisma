@@ -41,7 +41,7 @@ const EditTodo = ({ todo }: { todo: todoType }) => {
               type="text"
               name="newTitle"
               placeholder="Edit Todo..."
-              style="border mr-2 px-1.5 py-1.5"
+              style="border mr-2 px-0.75 py-0.75"
             />
           </div>
         </Form>
