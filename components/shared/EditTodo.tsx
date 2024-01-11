@@ -4,29 +4,37 @@ import { edit } from "@/app/actions/todoActions";
 import Form from "../ui/Form";
 import Input from "../ui/Input";
 import { FaPen } from "react-icons/fa";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import Button from "../ui/Button";
 import { todoType } from "@/types/todoTypes";
+import { GrClose } from "react-icons/gr";
 
-const EditTodo = ({ todo }: { todo: todoType }) => {
-  const [editTodo, setEditTodo] = useState(false);
+type TodoProps = {
+  todo:todoType
+  editTodo: true
+  setEditTodo: Dispatch<SetStateAction<boolean>>
+}
+
+const EditTodo = ({ todo, editTodo, setEditTodo }:TodoProps) => {
 
   const handleEdit = () => {
     if(todo.isCompleted === true) {
       return
     }
     setEditTodo(!editTodo);
-  };
+  }
 
   const handleSubmit = () => {
     setEditTodo(false);
-  };
+  }
+
   return (
     <div className="flex items-center">
       <Button
         onClick={handleEdit}
-        text={<FaPen />}
+        text={editTodo ? <GrClose /> : <FaPen />}
         actionButton
+        style="mr-1"
       />
 
       {editTodo ? (
