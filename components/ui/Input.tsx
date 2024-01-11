@@ -10,7 +10,7 @@ const Input = ({ name, type, placeholder, value, style }: inputProps) => {
   return (
     <>
       <input
-        className={`${style} w-full flex placeholder-gray-600 font-semibold items-center text-gray-600 bg-white rounded-md py-5 px-5 focus:outline-none`}
+        className={`w-full flex placeholder-gray-600 font-semibold items-center text-gray-600 bg-white rounded-md py-5 px-5 focus:outline-none ${style}`}
         name={name}
         type={type}
         value={value}

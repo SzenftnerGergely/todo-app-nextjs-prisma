@@ -13,9 +13,9 @@ const Todo = ({ todo }: { todo: todoType }) => {
   return (
     <div
       className={`flex items-center justify-between py-4 px-5 
-      ${todo.isCompleted === true ? "line-through" : "none"}`}
+      ${todo.isCompleted === true ? "line-through text-gray-400" : "none"}`}
       onMouseEnter={() => setIsShown(true)}
-      onMouseLeave={() => setIsShown(false)}
+      onMouseLeave={() => {setIsShown(false), setEditTodo(false)}}
     >
       <div className="flex items-center gap-3">
         <ChangeTodo todo={todo} />
@@ -27,7 +27,7 @@ const Todo = ({ todo }: { todo: todoType }) => {
       </div>
       {isShown && <div className="flex items-center gap-2">
         {!todo.isCompleted && editTodo && <EditTodo todo={todo} editTodo={editTodo} setEditTodo={setEditTodo} />}
-        <DeleteTodo todo={todo} />
+        <DeleteTodo todo={todo} editTodo={editTodo} />
       </div>}
     </div>
   );

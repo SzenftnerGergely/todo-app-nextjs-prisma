@@ -1,19 +1,18 @@
 import Todo from "./Todo";
 
 type TodoProps = {
-    todos:
-    {
+    todos: {
         title: string | null
         id: string
         isCompleted: boolean
     }[]
 }
 
-const TodosList = async ({ todos }: TodoProps) => {
+const TodosList = ({ todos }: TodoProps) => {
 
     return (
         <div className="bg-white dark:bg-gray-800 rounded-t-md flex flex-col
-        items-center justify-center w-full shadow-xl mt-10">
+        items-center justify-center w-full shadow-xl mt-6">
             {todos.length > 0 ?
 
                 (todos.map((todo, id) => (

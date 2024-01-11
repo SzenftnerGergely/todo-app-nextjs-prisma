@@ -15,9 +15,9 @@ const Header = () => {
       >
         {
           theme === "dark" ? (
-            <BsSun />
+              <BsSun />
           ) : (
-            <BsMoonFill />
+              <BsMoonFill />
           )
         }
 

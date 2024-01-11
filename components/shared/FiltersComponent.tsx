@@ -20,7 +20,7 @@ const FiltersComponent = ({ todos }: TodoProps) => {
     return (
         <div className="bg-white dark:bg-gray-800 rounded-b-md flex flex-col items-center justify-center w-full shadow-xl">
 
-            <div className="w-full flex items-center justify-between py-1 text-sm px-6">
+            <div className="w-full flex items-center justify-between py-1 text-sm px-8">
                 <span>{completedTodos.length} items left</span>
 
                 <div className="flex gap-3">

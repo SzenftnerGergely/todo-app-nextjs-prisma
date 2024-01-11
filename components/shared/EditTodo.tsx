@@ -11,7 +11,7 @@ import { GrClose } from "react-icons/gr";
 
 type TodoProps = {
   todo:todoType
-  editTodo: true
+  editTodo: boolean
   setEditTodo: Dispatch<SetStateAction<boolean>>
 }
 

@@ -4,16 +4,24 @@ import { GrClose } from "react-icons/gr";
 import Form from "../ui/Form";
 import { todoType } from "@/types/todoTypes";
 
-const DeleteTodo = ({ todo }: { todo: todoType }) => {
+type TodoProps = {
+  todo: todoType
+  editTodo: boolean
+}
+
+const DeleteTodo = ({ todo, editTodo }: TodoProps) => {
   return (
-    <Form action={deleteTodo}>
-      <input type="hidden" name="inputId" value={todo.id} />
-      <Button
-        actionButton
-        text={<GrClose />}
-        type="submit"
-      />
-    </Form>
+    <>
+      {!editTodo &&
+        <Form action={deleteTodo}>
+          <input type="hidden" name="inputId" value={todo.id} />
+          <Button
+            actionButton
+            text={<GrClose />}
+            type="submit"
+          />
+        </Form>}
+    </>
   );
 };
 
