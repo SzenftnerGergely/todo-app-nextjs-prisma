@@ -25,7 +25,7 @@ const ChangeTodo = ({ todo }: { todo: todoType }) => {
           bg-gradient-to-br from-[#69c2fc] to-[#a574ee]" /> 
           : <GiCircle className="text-gray-400" />
         }
-        stye="text-2xl fill-white p-0 hover:bg-white flex items-center"
+        style="text-2xl fill-white p-0 hover:bg-white flex items-center"
       />
     </Form>
   );

@@ -8,10 +8,10 @@ interface buttonProps {
   text: string | ReactNode;
   onClick?: () => void;
   actionButton?: boolean;
-  stye?: string
+  style?: string
 }
 
-const Button = ({ type, text, onClick, actionButton, stye }: buttonProps) => {
+const Button = ({ type, text, onClick, actionButton, style }: buttonProps) => {
   return (
     <>
       <button
@@ -19,7 +19,7 @@ const Button = ({ type, text, onClick, actionButton, stye }: buttonProps) => {
         type={type}
         className={clsx(
           actionButton &&
-          `${stye} hover:cursor-pointer hover:bg-slate-300 p-2 rounded-full transition-all`
+          `${style} hover:cursor-pointer hover:bg-slate-300 p-2 rounded-full transition-all`
         )}
       >
         {text}

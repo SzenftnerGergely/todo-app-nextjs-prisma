@@ -83,6 +83,25 @@ export async function deleteCompletedTodo() {
   revalidatePath("/");
 }
 
+export async function filterActiveTodo() {
+  const data = await prisma.todo.findMany({
+    where: { isCompleted: false },
+  });
+  
+  revalidatePath("/");
+
+  return data
+}
+
+export async function filterCompletedTodo() {
+  const data = await prisma.todo.findMany({
+    where: { isCompleted: true },
+  });
+  
+  revalidatePath("/");
+
+  return data
+}
 
 export async function getAllTodos() {
   const data = await prisma.todo.findMany({
