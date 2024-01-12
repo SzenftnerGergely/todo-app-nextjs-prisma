@@ -23,9 +23,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={Josefin_San.className}>
         <ThemeContextProvider>
-          <div className='dark:bg-[#181824] h-screen w-full 
-          flex flex-col items-center text-gray-600 dark:text-gray-400'
-          >
+          <div className='dark:bg-[#181824] bg-gray-50 h-screen w-full 
+          flex flex-col items-center text-gray-600 dark:text-gray-400'>
             <Background/>
             {children}
           </div>

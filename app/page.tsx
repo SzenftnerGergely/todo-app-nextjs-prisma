@@ -3,6 +3,7 @@ import Header from "@/components/shared/Header";
 import TodosPage from "@/components/shared/TodosList";
 import { getAllTodos } from "./actions/todoActions";
 import FiltersComponent from "@/components/shared/FiltersComponent";
+import Filters from "@/components/shared/Filters";
 
 const Home = async () => {
   const todos = await getAllTodos()
@@ -13,6 +14,7 @@ const Home = async () => {
       <AddTodo />
       <TodosPage todos={todos} />
       <FiltersComponent todos={todos} />
+      <Filters />
     </div>
   )
 }

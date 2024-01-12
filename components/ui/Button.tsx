@@ -19,7 +19,7 @@ const Button = ({ type, text, onClick, actionButton, style }: buttonProps) => {
         type={type}
         className={clsx(
           actionButton &&
-          `${style} hover:cursor-pointer hover:bg-slate-300 p-2 rounded-full transition-all`
+          `hover:cursor-pointer hover:bg-slate-300 p-2 rounded-full transition-all block ${style} `
         )}
       >
         {text}
