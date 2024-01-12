@@ -11,12 +11,12 @@ type TodoProps = {
 const TodosList = ({ todos }: TodoProps) => {
 
     return (
-        <div className="bg-white dark:bg-gray-800 rounded-t-md flex flex-col
+        <div className="bg-white dark:bg-[#25273c] rounded-t-md flex flex-col
         items-center justify-center w-full shadow-xl mt-6">
             {todos.length > 0 ?
 
                 (todos.map((todo, id) => (
-                    <div className="w-full border-b" key={id}>
+                    <div className="w-full border-b dark:border-b-gray-600" key={id}>
                         <Todo todo={todo} />
                     </div>
                 )))

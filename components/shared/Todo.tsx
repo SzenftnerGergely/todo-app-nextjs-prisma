@@ -13,7 +13,7 @@ const Todo = ({ todo }: { todo: todoType }) => {
   return (
     <div
       className={`flex items-center justify-between py-4 px-5 
-      ${todo.isCompleted === true ? "line-through text-gray-400" : "none"}`}
+      ${todo.isCompleted === true ? "line-through text-gray-400 dark:text-gray-600" : "none"}`}
       onMouseEnter={() => setIsShown(true)}
       onMouseLeave={() => {setIsShown(false), setEditTodo(false)}}
     >

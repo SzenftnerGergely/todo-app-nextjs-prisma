@@ -18,7 +18,7 @@ const FiltersComponent = ({ todos }: TodoProps) => {
     const completedTodos = todos.filter((todo) => todo.isCompleted == false)
 
     return (
-        <div className="bg-white dark:bg-gray-800 rounded-b-md flex flex-col items-center justify-center w-full shadow-xl">
+        <div className="bg-white dark:bg-[#25273c] rounded-b-md flex flex-col items-center justify-center w-full shadow-xl">
 
             <div className="w-full flex items-center justify-between py-1 text-sm px-8">
                 <span>{completedTodos.length} items left</span>
@@ -34,7 +34,7 @@ const FiltersComponent = ({ todos }: TodoProps) => {
                         actionButton
                         text="Clear Completed"
                         type="submit"
-                        style='hover:bg-white hover:text-gray-400'
+                        style='hover:bg-white dark:hover:bg-[#25273c] hover:text-gray-400'
                     />
                 </Form>
             </div>

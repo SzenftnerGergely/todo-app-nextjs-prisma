@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <div className='text-5xl uppercase font-semibold tracking-widest mt-16 mb-10 flex justify-between items-center'>
       <h2 className='text-white'>Todo</h2>
-      <button className='text-white text-4xl'
+      <button className='text-white text-3xl'
         onClick={toggleTheme}
       >
         {

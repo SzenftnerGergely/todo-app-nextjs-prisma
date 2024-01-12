@@ -23,9 +23,9 @@ const ChangeTodo = ({ todo }: { todo: todoType }) => {
         text={isCompleted ? 
           <MdOutlineCheck  className="rounded-full p-1 text-white
           bg-gradient-to-br from-[#69c2fc] to-[#a574ee]" /> 
-          : <GiCircle className="text-gray-400" />
+          : <GiCircle className="text-gray-400 dark:text-gray-600" />
         }
-        style="text-2xl fill-white p-0 hover:bg-white flex items-center"
+        style="text-2xl fill-white p-0 hover:bg-white dark:hover:bg-[#25273c] flex items-center"
       />
     </Form>
   );

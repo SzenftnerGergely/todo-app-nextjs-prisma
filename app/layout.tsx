@@ -3,7 +3,6 @@ import { Josefin_Sans } from 'next/font/google'
 import './globals.css'
 import Background from '@/components/shared/Background'
 import ThemeContextProvider from '@/components/shared/ThemeContext'
-import { DragDropContext } from 'react-beautiful-dnd'
 
 
 const Josefin_San = Josefin_Sans({
@@ -24,8 +23,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={Josefin_San.className}>
         <ThemeContextProvider>
-          <Background />
-          <div className='h-screen w-full flex flex-col items-center text-gray-600'>
+          <div className='dark:bg-[#181824] h-screen w-full 
+          flex flex-col items-center text-gray-600 dark:text-gray-400'
+          >
+            <Background/>
             {children}
           </div>
         </ThemeContextProvider>
