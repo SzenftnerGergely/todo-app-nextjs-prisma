@@ -14,7 +14,7 @@ const Home = async () => {
       <AddTodo />
       <TodosPage todos={todos} />
       <FiltersComponent todos={todos} />
-      <Filters />
+      <Filters style='sm:hidden flex bg-white dark:bg-[#25273c] w-full mt-4 rounded-md py-3 px-4 shadow-xl justify-center gap-4' />
     </div>
   )
 }
