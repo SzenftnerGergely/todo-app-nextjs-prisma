@@ -1,4 +1,5 @@
-"use server";
+"use server"
+
 import { revalidatePath } from "next/cache"
 import { prisma } from "@/utils/prisma"
 
@@ -9,9 +10,13 @@ export async function create(formData: FormData) {
     return
   }
 
+  const existingTodos = await prisma.todo.findMany();
+  const order = existingTodos.length + 1;
+
   await prisma.todo.create({
     data: {
       title: input,
+      order: order,
     },
   });
 
@@ -110,10 +115,15 @@ export async function getAllTodos() {
           id: true,
           isCompleted: true,
       },
-      orderBy: {
-          createdAt: "desc",
-      },
+      orderBy: { order: 'asc' }
   })
 
   return data
 }
+
+export async function updateOrder (id: string, newOrder: number) {
+  await prisma.todo.update({
+    where: { id: id },
+    data: { order: newOrder },
+  });
+};

@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={Josefin_San.className}>
+      <body className={`${Josefin_San.className} dark:bg-[#181824] bg-gray-50`}>
         <ThemeContextProvider>
           <div className='dark:bg-[#181824] bg-gray-50 h-screen w-full 
           flex flex-col items-center text-gray-600 dark:text-gray-400'>

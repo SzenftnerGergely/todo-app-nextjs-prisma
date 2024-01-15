@@ -17,7 +17,7 @@ const Filters = ({ style }: FilterProps) => {
     const pathname = usePathname()
 
     return (
-        <nav className={`${style} font-semibold`}>
+        <nav className={`${style} font-semibold mb-4 sm:mb-0`}>
             {links.map((link, idx) => (
                 <div key={idx}>
                     {pathname === link.href ? (

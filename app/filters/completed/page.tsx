@@ -1,7 +1,7 @@
 import { filterActiveTodo, filterCompletedTodo } from '@/app/actions/todoActions'
 import AddTodo from '@/components/shared/AddTodo'
 import Filters from '@/components/shared/Filters'
-import FiltersComponent from '@/components/shared/FiltersComponent'
+import BottomInfoPanel from '@/components/shared/BottomInfoPanel'
 import Header from '@/components/shared/Header'
 import TodosList from '@/components/shared/TodosList'
 import React from 'react'
@@ -14,7 +14,7 @@ const page = async () => {
             <Header />
             <AddTodo />
             <TodosList todos={todos} />
-            <FiltersComponent todos={todos} />
+            <BottomInfoPanel todos={todos} />
             <Filters style='sm:hidden flex bg-white dark:bg-[#25273c] w-full mt-4 rounded-md py-3 px-4 shadow-xl justify-center gap-4' />
         </div>
     )

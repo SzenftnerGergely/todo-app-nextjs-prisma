@@ -2,7 +2,7 @@ import AddTodo from "@/components/shared/AddTodo";
 import Header from "@/components/shared/Header";
 import TodosPage from "@/components/shared/TodosList";
 import { getAllTodos } from "./actions/todoActions";
-import FiltersComponent from "@/components/shared/FiltersComponent";
+import BottomInfoPanel from "@/components/shared/BottomInfoPanel";
 import Filters from "@/components/shared/Filters";
 
 const Home = async () => {
@@ -13,7 +13,7 @@ const Home = async () => {
       <Header />
       <AddTodo />
       <TodosPage todos={todos} />
-      <FiltersComponent todos={todos} />
+      <BottomInfoPanel todos={todos} />
       <Filters style='sm:hidden flex bg-white dark:bg-[#25273c] w-full mt-4 rounded-md py-3 px-4 shadow-xl justify-center gap-4' />
     </div>
   )

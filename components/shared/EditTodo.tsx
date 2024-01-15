@@ -32,9 +32,9 @@ const EditTodo = ({ todo, editTodo, setEditTodo }:TodoProps) => {
     <div className="flex items-center">
       <Button
         onClick={handleEdit}
-        text={editTodo ? <GrClose /> : <FaPen />}
+        text={<GrClose />}
         actionButton
-        style="mr-1"
+        style="mr-1 dark:hover:text-gray-800"
       />
 
       {editTodo ? (

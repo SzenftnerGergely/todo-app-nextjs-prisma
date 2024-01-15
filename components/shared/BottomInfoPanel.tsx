@@ -2,19 +2,17 @@ import React from 'react'
 import { deleteCompletedTodo } from "@/app/actions/todoActions";
 import Form from "../ui/Form";
 import Button from "../ui/Button";
-import Link from "next/link";
 import Filters from './Filters';
 
 type TodoProps = {
-    todos:
-    {
+    todos: {
         title: string | null
         id: string
         isCompleted: boolean
     }[]
 }
 
-const FiltersComponent = ({ todos }: TodoProps) => {
+const BottomInfoPanel = ({ todos }: TodoProps) => {
     const completedTodos = todos.filter((todo) => todo.isCompleted == false)
 
     return (
@@ -42,4 +40,4 @@ const FiltersComponent = ({ todos }: TodoProps) => {
     )
 }
 
-export default FiltersComponent
+export default BottomInfoPanel
