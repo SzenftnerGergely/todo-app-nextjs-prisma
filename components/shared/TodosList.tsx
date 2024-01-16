@@ -22,15 +22,16 @@ const TodosList = ({ todos }: TodoProps) => {
       if (!destination) return;
       if (destination.droppableId === source.droppableId && destination.index === source.index) return;
   
+
       const updatedTodos = Array.from(orderedData);
       const [movedTodo] = updatedTodos.splice(source.index, 1);
       updatedTodos.splice(destination.index, 0, movedTodo);
-  
+    
+      updatedTodos.forEach((todo, index) => {
+        updateOrder(todo.id, index);
+      });
+    
       setOrderedData(updatedTodos);
-
-      updateOrder(movedTodo.id, destination.index);
-      console.log(destination.index);
-      
     };
   
     useEffect(() => {

@@ -114,6 +114,7 @@ export async function getAllTodos() {
           title: true,
           id: true,
           isCompleted: true,
+          order: true,
       },
       orderBy: { order: 'asc' }
   })
@@ -121,9 +122,17 @@ export async function getAllTodos() {
   return data
 }
 
-export async function updateOrder (id: string, newOrder: number) {
-  await prisma.todo.update({
-    where: { id: id },
-    data: { order: newOrder },
-  });
-};
+export async function updateOrder(id: string, newOrder: number) {
+  try {
+    const updatedTodo = await prisma.todo.update({
+      where: { id: id },
+      data: { order: newOrder },
+    })
+
+    return updatedTodo
+
+  } catch (error) {
+    console.error('Failed to update todo order:', error)
+    throw new Error('Failed to update todo order')
+  }
+}
